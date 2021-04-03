@@ -1,0 +1,39 @@
+<h2 mat-dialog-tittle>
+  Agregar Cliente
+</h2>
+<mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Cédula cliente</mat-label>
+      <input [(ngModel)]="ID_NUMBER" [ngModelOptions]="{standalone: true}" matInput placeholder="Ejemplo: 101230456"
+        value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre cliente</mat-label>
+      <input [(ngModel)]="NAME_USER" [ngModelOptions]="{standalone: true}" matInput
+        placeholder="Ejemplo: Nombre Apellido" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre de usuario</mat-label>
+
+      <input type="tel" [(ngModel)]="USER_NAME" [ngModelOptions]="{standalone: true}" matInput
+        placeholder="Ejemplo: Najera.Dab30" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Correo electronico</mat-label>
+      <input type="email" [(ngModel)]="E_MAIL" [ngModelOptions]="{standalone: true}" matInput
+        placeholder="Ejemplo: direccioncorreo@gmail.com" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" [(ngModel)]="PASSWORD" [ngModelOptions]="{standalone: true}" matInput placeholder="Direccion"
+        value="">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="primary" class="basic example-full-width" (click)="submit()">
+    <mat-icon>add</mat-icon>
+    Crear
+  </button>
+
+</mat-dialog-content>

@@ -1,0 +1,39 @@
+<h2 mat-dialog-tittle>
+  Agregar producto
+</h2>
+<mat-dialog-content>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Numero de cédula</mat-label>
+      <input [(ngModel)]="id_number" [ngModelOptions]="{standalone: true}" type="text" matInput
+        placeholder="Ejemplo: 2222222" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Monto de prestamo</mat-label>
+      <input matInput [(ngModel)]="first_amount" [ngModelOptions]="{standalone: true}" placeholder="Ejemplo: Camisa Negra"
+        value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Fecha inicio</mat-label>
+      <input type="text" matInput [(ngModel)]="date_start" [ngModelOptions]="{standalone: true}"
+        placeholder="Ejemplo: 3500" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Fecha final</mat-label>
+      <input type="text" matInput [(ngModel)]="date_close" [ngModelOptions]="{standalone: true}"
+        placeholder="Ejemplo: 1500" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <textarea matInput [(ngModel)]="description" [ngModelOptions]="{standalone: true}"
+        placeholder="Ejemplo: Puede ser una descripcion que recuerde el producto exacto."></textarea>
+    </mat-form-field>
+
+
+  </form>
+  <button mat-raised-button color="primary" class="basic example-full-width" (click)="submit()">
+    <mat-icon>add</mat-icon>
+    Crear
+  </button>
+
+</mat-dialog-content>

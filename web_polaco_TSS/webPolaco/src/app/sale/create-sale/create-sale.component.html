@@ -1,0 +1,37 @@
+<h2 mat-dialog-tittle>
+  Agregar Venta
+</h2>
+<mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Productos</mat-label>
+      <mat-select [ngModelOptions]="{standalone: true}"  [(ngModel)]="selectedsArray" multiple (selectionChange)="itemsSelected(selectedsArray)">
+        <mat-option *ngFor="let item of products" [value]="item">{{item.NAME_PRODUCT}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Clientes</mat-label>
+      <mat-select [ngModelOptions]="{standalone: true}" (selectionChange)="customerSelected(selected_customer)"   [(ngModel)]="selected_customer"  name="customers">
+        <mat-option *ngFor="let item of customers" [value]="item.ID_NUMBER">
+          {{item.NAME_CUSTOMER}}
+        </mat-option>
+      </mat-select>
+
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Tipo de pago</mat-label>
+      <mat-select [ngModelOptions]="{standalone: true}"  [(ngModel)]="type_payment"  (selectionChange)="typePaymentSelected()">
+        <mat-option [value]="1" >Semanal</mat-option>
+        <mat-option [value]="2">Quincenal</mat-option>
+        <mat-option [value]="3">Mensual</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+  <button mat-raised-button color="primary"   (click)="addSale()" class="basic example-full-width">
+    <mat-icon>add</mat-icon>
+    Crear
+  </button>
+
+</mat-dialog-content>

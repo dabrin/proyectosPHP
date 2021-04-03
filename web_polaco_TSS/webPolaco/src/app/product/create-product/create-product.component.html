@@ -1,0 +1,41 @@
+<h2 mat-dialog-tittle>
+  Agregar producto
+</h2>
+<mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Código producto</mat-label>
+      <input [(ngModel)]="code" [ngModelOptions]="{standalone: true}" type="text"  matInput placeholder="Ejemplo: 2222222" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre producto</mat-label>
+      <input matInput  [(ngModel)]="name" [ngModelOptions]="{standalone: true}" placeholder="Ejemplo: Camisa Negra" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Precio venta</mat-label>
+      <input type="number"  matInput [(ngModel)]="sale_price"  [ngModelOptions]="{standalone: true}"placeholder="Ejemplo: 3500" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Precio costo</mat-label>
+      <input type="number" matInput [(ngModel)]="cost_price"  [ngModelOptions]="{standalone: true}" placeholder="Ejemplo: 1500" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Cantidad</mat-label>
+      <input type="number" matInput [(ngModel)]="quantity"  [ngModelOptions]="{standalone: true}" placeholder="Ejemplo: 2" value="">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <textarea matInput [(ngModel)]="description" [ngModelOptions]="{standalone: true}" placeholder="Ejemplo: Puede ser una descripcion que recuerde el producto exacto."></textarea>
+    </mat-form-field>
+
+
+  </form>
+<button mat-raised-button color="primary" class="basic example-full-width" (click)="submit()">
+  <mat-icon>add</mat-icon>
+  Crear
+</button>
+
+</mat-dialog-content>

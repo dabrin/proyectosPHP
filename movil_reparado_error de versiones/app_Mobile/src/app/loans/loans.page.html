@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title text-center>Prestamos</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Cédula Cliente" (ionChange)="search($event)">
+  </ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+
+    <ion-item *ngFor="let loan of loans | filter: textSearch: 'ID_NUMBER'">
+      <ion-card color="light">
+        <ion-card-header>
+          <ion-card-tittle>{{ loan.ID_NUMBER | uppercase }}</ion-card-tittle>
+          <ion-card-subtitle>Balance: ₡{{ loan.FIRST_AMOUNT }}</ion-card-subtitle>
+          <ion-card-subtitle>Pagado: ₡{{ loan.PAYMENT }}</ion-card-subtitle>
+          <ion-card-content>
+            <ion-button (click)="payment(loan.ID_NUMBER)" type="button"> Hacer Abono <ion-icon name="cash"></ion-icon>
+            </ion-button>
+            <ion-button (click)="deleteSale(loan.ID_NUMBER)" color="danger" type="button">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+            <ion-button color="secondary" (click)="printer(loan)">
+              <ion-icon name="print-outline"></ion-icon>
+            </ion-button>
+          </ion-card-content>
+
+        </ion-card-header>
+      </ion-card>
+    </ion-item>
+
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary" (click)="addSale()">
+      <ion-icon name="wallet-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

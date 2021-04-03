@@ -1,0 +1,14 @@
+<p>Cantidad de dinero a abonar:</p>
+<form>
+  <mat-form-field class="example-full-width">
+    <mat-label>Monto por abonar</mat-label>
+    <input [(ngModel)]="amount_payment" [ngModelOptions]="{standalone: true}" matInput placeholder="Ejemplo: 4500"
+      value="">
+  </mat-form-field>
+</form>
+
+<button mat-raised-button color="primary" class="basic example-full-width" (click)="addPayment()">
+  <mat-icon>add</mat-icon>
+  Agregar Abono
+</button>
+

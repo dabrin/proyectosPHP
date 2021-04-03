@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Realizar venta</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Nombre Producto" (ionChange)="searchProduct($event)">
+  </ion-searchbar>
+  <ion-searchbar placeholder="Nombre Cliente" (ionChange)="searchCustomer($event)">
+  </ion-searchbar>
+ 
+</ion-header>
+
+
+<ion-content>
+<ion-list>
+  <ion-list-header>
+    <ion-label>
+      Productos disponibles con precio
+    </ion-label>
+  </ion-list-header>
+
+  <ion-item>
+    <ion-label>Productos</ion-label>
+      <ion-select [(ngModel)]="selectedsArray" multiple="true" cancelText="cancel" okText="ok"
+        (ionChange)="onItemSelection(selectedsArray, 0)">
+        
+        <ion-select-option *ngFor="let product of products | filter: textSearchProd: 'NAME_PRODUCT'" [value]="product" selected="false">
+          {{product.NAME_PRODUCT }}: {{product.SALE_PRICE }}</ion-select-option>
+      </ion-select> 
+
+
+    
+  </ion-item>
+</ion-list>
+
+<ion-list>
+  <ion-list-header>
+   <strong>Productos seleccionados con precio</strong>  
+  </ion-list-header>
+  <ion-item *ngFor="let product of selectedsArray">
+    {{product.NAME_PRODUCT}} Valor:
+    {{product.SALE_PRICE}}
+  </ion-item>
+
+
+</ion-list>
+<ion-list>
+  <ion-list-header>
+    <strong>Cliente que efectuará la venta</strong>
+  </ion-list-header>
+  <ion-select id="id_User" [(ngModel)]="selectedCustomer"  cancelText="cancel" okText="ok"
+    (ionChange)="onCustomerSelection(selectedCustomer)">
+    <ion-select-option *ngFor="let customer of customers | filter: textSearchCust: 'NAME_CUSTOMER'" [value]="customer" >
+      {{customer.NAME_CUSTOMER }}</ion-select-option>
+  </ion-select>
+
+</ion-list>
+
+
+<ion-list>
+  <ion-list-header>
+    <strong>
+      Tipo de pago para esta cuenta:
+    </strong>
+  </ion-list-header>
+  <ion-select id="id_type" [(ngModel)]="selectedtype" cancelText="cancel" okText="ok"
+    (ionChange)="onTypeSelected(selectedtype)">
+    <ion-select-option  [value]="1" selected="false">
+      Semanal</ion-select-option>
+  
+  <ion-select-option [value]="2" selected="false">
+    Quincenal</ion-select-option>
+  
+  <ion-select-option [value]="3" selected="false">
+    Mensual</ion-select-option>
+  </ion-select>
+
+</ion-list>
+
+  <ion-button color="secondary" expand="full" (click)="completeSold()">
+    Agregar venta
+  </ion-button>
+  <ion-button color="danger" expand="full" (click)="dismissModal()">
+    Cerrar
+  </ion-button>
+</ion-content>

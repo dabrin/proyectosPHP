@@ -1,0 +1,30 @@
+
+<mat-toolbar color="primary">
+  <button routerLink="home" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>store</mat-icon>
+  </button>
+  <span>Polaco</span>
+  <a mat-button routerLink="list-products">
+    Productos
+  </a>
+  <a routerLink="list-customers" mat-button>
+    Clientes
+  </a>
+  <a routerLink="list-sales" mat-button>
+    Ventas
+  </a>
+  <a routerLink="list-loan" mat-button>
+    Prestamos
+  </a>
+  <a routerLink="list-users" mat-button>
+    Usuarios
+  </a>
+  <span class="example-spacer"></span>
+
+
+  <button *ngIf='this.user!=""' mat-icon-button class="example-icon" (click)="logOut()" aria-label="Example icon-button with share icon">
+    <mat-icon>logout</mat-icon>
+  </button>
+</mat-toolbar>
+
+

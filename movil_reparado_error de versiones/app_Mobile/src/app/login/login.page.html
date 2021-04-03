@@ -1,0 +1,51 @@
+<ion-header>
+ 
+</ion-header>
+
+<ion-content class="ion-text-center" style=" display: flex;
+  align-items: center;" >
+<ion-card color="light">
+  <ion-card-header class="ion-text-center">
+    <ion-card-tittle >INICIAR SESION </ion-card-tittle>
+    <ion-card-subtitle>Digite sus credenciales</ion-card-subtitle>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="8">
+          <div>
+            <ion-img style=" width: 200px; height: 200px;"  src="assets/avatar_log.svg">
+          </ion-img>
+          </div>
+        </ion-col>
+       
+      </ion-row>
+    
+    
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item class="ion-margin">
+        <ion-label  position="floating">
+          <ion-icon position="floating" name="person"></ion-icon>
+          Nombre Usuario</ion-label>
+        <ion-input [(ngModel)]="userName" [ngModelOptions]="{standalone: true}"  value="" id="name"></ion-input>
+      </ion-item>
+      <ion-item class="ion-margin ">
+        <ion-label position="floating">
+          <ion-icon position="floating" name="key"></ion-icon>
+          Contraseña
+        </ion-label>
+        <ion-input  [(ngModel)]="password" [ngModelOptions]="{standalone: true}" type="password" value=""  id="code"></ion-input>
+      </ion-item>
+        <ion-button fill="outline"id="button" class="ion-margin" color="secondary" (click)="iniciar()">
+        INICIAR
+        <ion-icon name="log-in-outline"></ion-icon>
+        </ion-button>
+      <!--<div *ngIf="this.value=='0'">
+        <ion-button fill="outline" class="ion-margin" color="danger" >
+          Error revise los credenciales!!
+        </ion-button>
+      </div>-->
+       
+    </ion-card-content>
+
+ 
+</ion-card>
+</ion-content>

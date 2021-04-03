@@ -1,0 +1,71 @@
+
+
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+    <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Generar Respaldo de Productos</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Al seleccionar el boton de "Guardar" se descargara un Xlsx de los productos actuales y su estado. Con todos los cambios realizados desde el sitio y la aplicación.
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button color="primary" mat-raised-button (click)="generateXlsProds()">Guardar Productos<mat-icon>download</mat-icon> </button>
+    </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
+
+
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Generar Respaldo de Ventas</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Al seleccionar el boton de "Guardar" se descargara un Xlsx de las ventas actuales y su estado. Con todos los
+          cambios realizados desde el sitio y la aplicación.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button color="primary" mat-raised-button (click)="generateXlsSales()">Guardar Ventas<mat-icon>download</mat-icon> </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Generar Respaldo de Clientes</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Al seleccionar el boton de "Guardar" se descargara un Xlsx de las Clientes. Con todos los
+          cambios realizados desde el sitio y la aplicación. Para cualquier problema.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button color="primary" mat-raised-button  (click)="generateXlsCustomers()">Guardar Clientes<mat-icon>download</mat-icon> </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Generar Respaldo de Abonos</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>
+          Al seleccionar el boton de "Guardar" se descargara un Xlsx de las Abonos realizados. Con todos los
+          detalles que se necesitan, para poder hacer sus correspondientes calculos.
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button color="primary" mat-raised-button (click)="generateXlsLogPayment()">Guardar Historico<mat-icon>download</mat-icon> </button>
+      </mat-card-actions>
+    </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+
+

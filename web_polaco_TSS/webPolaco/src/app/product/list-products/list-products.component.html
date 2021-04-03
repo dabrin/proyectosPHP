@@ -1,0 +1,61 @@
+<button mat-flat-button class="basic" (click)="create()">
+  <mat-icon>add</mat-icon>
+  Crear
+</button>
+<mat-label>
+  {{userName}}
+</mat-label>
+<mat-form-field color="primary" class="example-full-width">
+  <mat-label>Nombre por buscar</mat-label>
+  <input [(ngModel)]="textSearch" matInput placeholder="Nombre por buscar" type="text" value="" (input)="search()">
+</mat-form-field>
+
+
+  <table mat-table [dataSource]="dataSource | paginator:page_size:page_number" class="mat-elevation-z8 data-table">
+    <ng-container matColumnDef="codigo">
+      <th mat-header-cell *matHeaderCellDef> Codigo </th>
+      <td mat-cell *matCellDef="let element"> {{element.CODE_PRODUCT}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="nombre">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.NAME_PRODUCT}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="precio_costo">
+      <th mat-header-cell *matHeaderCellDef> Precio Costo </th>
+      <td mat-cell *matCellDef="let element"> {{element.COST_PRICE}} </td>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="precio_venta">
+      <th mat-header-cell *matHeaderCellDef> Precio venta </th>
+      <td mat-cell *matCellDef="let element"> {{element.SALE_PRICE}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="cantidad">
+      <th mat-header-cell *matHeaderCellDef> Cantidad </th>
+      <td mat-cell *matCellDef="let element"> {{element.QUANTITY}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="opciones">
+      <th mat-header-cell *matHeaderCellDef> Opciones </th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-icon-button class="example-icon" (click)="delete(element.CODE_PRODUCT)" aria-label="Example icon-button with menu icon">
+          <mat-icon>delete</mat-icon>
+        </button>
+
+        <button mat-icon-button class="example-icon" (click)="update(element.CODE_PRODUCT)"  aria-label="Example icon-button with menu icon">
+          <mat-icon>update</mat-icon>
+        </button>
+
+     </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<mat-paginator [length]="dataSource.length" [pageSize]="page_size" [pageSizeOptions]="[5, 10, 25, 100]" (page)="handlePage($event)">
+</mat-paginator>

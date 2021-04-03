@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Crear Producto</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input id="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Codigo Producto</ion-label>
+      <ion-input id="code"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio Costo</ion-label>
+      <ion-input type="number" id="cost_price"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Precio Venta</ion-label>
+      <ion-input type="number" id="sale_price"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating" >Descripcion</ion-label>
+      <ion-input id="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Cantidad</ion-label>
+      <ion-input type="number" id="quantity"></ion-input>
+    </ion-item>
+  </form>
+
+  <ion-button  
+    expand="full"
+    color="secondary" (click)="addProduct()"> 
+      Agregar Producto
+  </ion-button>
+  <ion-button color="danger" (click)="dismissModal()" expand="full">
+    Cerrar
+  </ion-button>
+
+</ion-content>

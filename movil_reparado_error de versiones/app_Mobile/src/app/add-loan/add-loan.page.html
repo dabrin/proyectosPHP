@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Crear Loan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">id</ion-label>
+      <ion-input [(ngModel)]="id_number" [ngModelOptions]="{standalone: true}" id="id_number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Monto de prestamo</ion-label>
+      <ion-input [(ngModel)]="first_amount" [ngModelOptions]="{standalone: true}" type="number" id="code"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Descripcion</ion-label>
+      <ion-input [(ngModel)]="description" [ngModelOptions]="{standalone: true}" type="text" id="cost_price">
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Fecha Inicio</ion-label>
+      <ion-input [(ngModel)]="date_start" [ngModelOptions]="{standalone: true}" type="text" id="sale_price"></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>
+        Fecha Cierre
+      </ion-label>
+      <ion-dateTime (ionChange)="change($event)" placeholder="Dia a cancelar prestamo" [(ngModule)]="fecha"
+        value="{{fecha_ | date:'yyyy-MM-dd HH:mm:ss'}}" display-format="YYYY MM DD ">
+
+      </ion-dateTime>
+    </ion-item>
+{{fecha_}}
+  </form>
+
+  <ion-button expand="full" color="secondary" (click)="addLoan()">
+    Agregar Prestamo
+  </ion-button>
+  <ion-button color="danger" (click)="dismissModal()" expand="full">
+    Cerrar
+  </ion-button>
+
+</ion-content>

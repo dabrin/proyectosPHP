@@ -1,0 +1,61 @@
+<button mat-flat-button class="basic" (click)="create()">
+  <mat-icon>add</mat-icon>
+  Crear
+</button>
+<mat-form-field color="primary"class="example-full-width">
+  <mat-label>Cédula por buscar</mat-label>
+  <input [(ngModel)]="textSearch" matInput placeholder="Cedula por buscar" type="text"value="" (input)="search()">
+</mat-form-field>
+
+<table mat-table [dataSource]="dataSource | paginator:page_size:page_number" class="mat-elevation-z8 data-table">
+
+  <ng-container matColumnDef="cedula">
+    <th mat-header-cell *matHeaderCellDef> Cedula </th>
+    <td mat-cell *matCellDef="let element"> {{element.ID_NUMBER}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="fecha_venta">
+    <th mat-header-cell *matHeaderCellDef> Fecha de venta </th>
+    <td mat-cell *matCellDef="let element"> {{element.DATE_SALE}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="cuenta">
+    <th mat-header-cell *matHeaderCellDef> Cuenta por pagar </th>
+    <td mat-cell *matCellDef="let element"> {{element.BALANCE}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="pagado">
+    <th mat-header-cell *matHeaderCellDef> Cuenta pagada </th>
+    <td mat-cell *matCellDef="let element"> {{element.PAYMENT}} </td>
+  </ng-container>
+
+
+
+  <ng-container matColumnDef="opciones">
+    <th mat-header-cell *matHeaderCellDef> Opciones </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button class="example-icon" (click)="delete(element.ID_NUMBER)"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>delete</mat-icon>
+      </button>
+
+      <button mat-icon-button class="example-icon" (click)="payment(element.ID_NUMBER)"
+        aria-label="Example icon-button with menu icon">
+        <mat-icon>payment</mat-icon>
+      </button>
+
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<mat-paginator [length]="dataSource.length" [pageSize]="page_size" [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="handlePage($event)">
+
+</mat-paginator>
+
+

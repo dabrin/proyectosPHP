@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="tertiary">Inicio</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button color="tertiary"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card color="tertiary">
+    <ion-card-header>
+      <ion-card-subtitle>Bienvenido  a tu inventario {{this.user}}</ion-card-subtitle>
+      <ion-card-title>Aplicación de control</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      En esta aplicación podrá controlar su inventario e imprimir las facturas del cliente.
+      Versión beta, para ajustar detalles!
+      
+      El uso de la aplicación y sus funcionalidades, pueden encontrarse en el manual de usuario, que se le provisionará al
+      momento de la entrega del APK final.
+    </ion-card-content>
+       
+  </ion-card>
+  <ion-button class="ion-margin" routerLink="/users" *ngIf="this.value=='1'">
+    <!--<ion-item lines="none" detail="false" routerLink="/users">-->
+    <ion-icon slot="start"  name="person"></ion-icon>
+    <ion-label > Control de cuentas</ion-label>
+    <!-- </ion-item>-->
+  </ion-button>
+  
+</ion-content>

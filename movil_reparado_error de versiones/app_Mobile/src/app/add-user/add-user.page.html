@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Agregar Usuario</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goCustomers()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-item>
+      <ion-label position="floating">Cédula</ion-label>
+      <ion-input [(ngModel)]="id_number" [ngModelOptions]="{standalone: true}"  ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="name_user" [ngModelOptions]="{standalone: true}" ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Nombre de usuario</ion-label>
+      <ion-input [(ngModel)]="user_name" [ngModelOptions]="{standalone: true}"   id="nombre_usuario"> </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="email" [ngModelOptions]="{standalone: true}"   id="mail"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input [(ngModel)]="user_pass" [ngModelOptions]="{standalone: true}"   type="password" id="address"></ion-input>
+    </ion-item>
+  </form>
+  <div *ngIf="1==0">
+    <ion-input [(ngModel)]="response" [ngModelOptions]="{standalone: true}" [hidden]></ion-input>
+  </div>
+  <div *ngIf='this.response!="0"'>
+    <ion-button fill="outline" color="danger" expand="full">
+      El nombre de usuario o cédula ya existen!
+    </ion-button>
+    
+  </div>
+  <div *ngIf='this.showSucc=="1"'>
+    <ion-button fill="success" color="danger" expand="full">
+      Se ingresó con éxito!
+    </ion-button>
+  </div>
+  
+ 
+
+  <ion-button color="secondary" expand="full" (click)="addUser()">
+    Crear Usuario
+  </ion-button>
+  <ion-button color="danger" expand="full" (click)="closeModal()">
+    Cerrar
+  </ion-button>
+</ion-content>

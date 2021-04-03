@@ -1,0 +1,42 @@
+<h2 mat-dialog-tittle>
+  Agregar Cliente
+</h2>
+<mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Cédula cliente</mat-label>
+      <input [(ngModel)]="ID_NUMBER" [ngModelOptions]="{standalone: true}" matInput placeholder="Ejemplo: 101230456" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre cliente</mat-label>
+      <input [(ngModel)]="NAME_CUSTOMER" [ngModelOptions]="{standalone: true}"matInput placeholder="Ejemplo: Nombre Apellido" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Numero de telefono</mat-label>
+      <span matPrefix>+506 &nbsp;</span>
+      <input type="tel" [(ngModel)]="PHONE_NUMBER" [ngModelOptions]="{standalone: true}" matInput placeholder="Ejemplo: 87654321" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Correo electronico</mat-label>
+      <input type="email" [(ngModel)]="E_MAIL" [ngModelOptions]="{standalone: true}" matInput placeholder="Ejemplo: direccioncorreo@gmail.com" value="">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Direccion</mat-label>
+      <input type="text" [(ngModel)]="ADDRESS" [ngModelOptions]="{standalone: true}" matInput placeholder="Direccion" value="">
+    </mat-form-field>
+
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Descripcion</mat-label>
+      <textarea  [(ngModel)]="DESCRIPTION" [ngModelOptions]="{standalone: true}"matInput  placeholder="Ejemplo: Puede ser una descripcion que recuerde el cliente exacto."></textarea>
+    </mat-form-field>
+
+
+  </form>
+  <button mat-raised-button color="primary" class="basic example-full-width" (click)="submit()">
+    <mat-icon>add</mat-icon>
+    Crear
+  </button>
+
+</mat-dialog-content>

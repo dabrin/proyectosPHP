@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Detalles del producto</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card color="light">
+  <ion-card-header>
+    {{this.code_product}}
+  </ion-card-header>
+  
+  <ion-item>
+    <ion-label position="floating">Nombre Producto</ion-label>
+    <ion-input id="name" value="{{this.name}}"></ion-input>
+    
+  </ion-item>
+    <ion-item><ion-label position="floating">Precio Costo</ion-label>
+    <ion-input type="number" id="cost_price" value="{{this.cost_price}}"> </ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label position="floating">Precio Venta</ion-label>
+      <ion-input type="number" id="sale_price" value="{{this.sale_price}}"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descripcion</ion-label>
+    <ion-input id="description" value="{{this.description}}"></ion-input>
+    
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cantidad</ion-label>
+    <ion-input type="number" id="quantity" value="{{this.quantity}}"></ion-input>
+    
+  </ion-item>
+</ion-card>
+
+
+<ion-button  (click)="saveProduct()" expand="full"color="primary">
+      Guardar Cambios
+    <ion-icon name="checkmark-circle"></ion-icon>
+</ion-button>
+
+
+
+
+
+</ion-content>

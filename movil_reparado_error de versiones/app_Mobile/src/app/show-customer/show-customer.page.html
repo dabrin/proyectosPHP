@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Detalles Cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card color="light">
+  <ion-card-header>
+    {{this.id_numb}}
+  </ion-card-header>
+  <ion-item>
+   <ion-label position="floating">Correo electronico:</ion-label>
+   <ion-input id="email" value="{{this.email}}">
+   </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Nombre de cliente:</ion-label>
+    <ion-input id="name" value="{{this.name}}">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Número de telefono:</ion-label>
+    <ion-input id="phone" value="{{this.phone}}">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descripcion:</ion-label>
+    <ion-input id="desc" value="{{this.desc}}">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Direccion:</ion-label>
+    <ion-input id="address" value="{{this.address}}">
+    </ion-input>
+  </ion-item>
+</ion-card>
+
+<ion-button (click)="saveCustomer()" class="ion-activatable ripple-parent" expand="full">
+  Guardar Cambios
+  <ion-icon name="checkmark-circle"></ion-icon>
+</ion-button>
+
+
+</ion-content>

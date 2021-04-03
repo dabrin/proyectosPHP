@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Agregar Cliente</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="goCustomers()"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<form>
+  <ion-item>
+    <ion-label position="floating">Nombre</ion-label>
+    <ion-input id="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Cédula</ion-label>
+    <ion-input id="id_number"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Numero de telefono</ion-label>
+    <ion-input  id="phone_number"> </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Correo</ion-label>
+    <ion-input  id="mail"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Direccion</ion-label>
+    <ion-input id="address"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Descripcion</ion-label>
+    <ion-input  id="description"></ion-input>
+  </ion-item>
+</form>
+
+<ion-button color="secondary" expand="full" (click)="addCustomer()">
+  Agregar Cliente
+</ion-button>
+<ion-button color="danger" expand="full" (click)="closeModal()">
+  Cerrar
+</ion-button>
+</ion-content>

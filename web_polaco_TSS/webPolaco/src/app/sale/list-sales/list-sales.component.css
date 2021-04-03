@@ -1,0 +1,11 @@
+.data-table {
+  width: 100%;
+}
+
+section {
+  display: table;
+}
+
+.basic {
+  margin: 10px;
+}

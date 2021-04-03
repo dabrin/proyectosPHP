@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title>Información para la factura</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      Número de cédula: {{id_customer}}
+    </ion-item>
+    <ion-item>
+      Facturador: {{name_user}}
+    </ion-item>
+    <ion-item>
+      Nombre de cliente: {{name_customer}}
+    </ion-item>
+    <ion-item>
+      Debe: ₡{{balance}}
+    </ion-item>
+    <ion-item>
+      Cancelado: ₡{{payment}}
+    </ion-item>
+    <ion-item>
+      Fecha de ultima venta: {{date}}
+    </ion-item>
+    <ion-item>
+      Tipo de pago: {{this.type_string}}
+    </ion-item>
+    <ion-item>
+      Ultimo abono: ₡{{this.last_payment}}
+    </ion-item>
+    <ion-item>
+      Balance anterior: ₡{{this.last_balance}}
+    </ion-item>
+    <ion-item>
+     Cuenta inicial: ₡{{this.init_amount}}
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="printStuff()" expand="full" color="secondary">
+    Imprimir
+    <ion-icon name="print-outline"></ion-icon>
+  </ion-button>
+<ion-list>
+  <ion-item *ngFor="let item of bluetoothList" (click)="selectPrinter(item.id)">
+    {{item.name}} {{item.id}}
+  </ion-item>
+</ion-list>
+<div>
+  Dispositivo Seleccionado: {{selectedPrinter}}
+</div>
+<ion-button color="danger" expand="full" (click)="closeModal()">
+  Cerrar
+</ion-button>
+</ion-content>

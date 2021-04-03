@@ -1,0 +1,182 @@
+*{
+    border:0;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #212121 ;
+    color: #FFF;
+    font-size: 1em;
+}
+
+
+
+footer{
+    color:#212121;
+    font-size: 0.85em;
+    padding: 0.75em 0;
+}
+
+header h1, nav{
+    display: inline-block;
+    max-width: 100%;
+    /*vertical-align: middle;*/
+}
+
+header, section#contenido{
+    background: #FFF ;
+    margin: 0 auto;
+    max-width: 90%;
+    /*text-align: center;*/
+}
+
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table .table-hover{
+    border-collapse: collapse;
+    width: 100%;
+    /*background-color: #212121;*/
+    
+}
+
+th, td {
+    padding: 15px;
+}
+div #tipo_inicio{
+    text-align: center;
+}
+
+
+section#principal, aside{
+    background: #EEE;
+    border-radius: 0.5em;
+    /*display: inline-block;*/
+    margin: 0 auto;
+    max-width: 100%;
+    padding: 0.25em;
+    vertical-align: top;
+    width: 90%;
+}
+
+input[type="submit"]{
+    background: #F60;
+    color: #500;
+    font-size: 1.25em;
+    padding: 0.25em;
+}
+
+button[type="submit"]{
+    background: #F60;
+    color: #500;
+    font-size: 1.25em;
+    padding: 0.25em;
+}
+
+
+form{
+    width: 100%;    
+}
+
+form div{
+    margin: 0.5em;
+    text-align: center;
+}
+
+   /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+
+    .row.content {
+        height:auto;
+    } 
+    }
+
+    .texto-registrate {
+	text-align: center;
+}
+
+.texto-registrate a {
+	display: block;
+	font-size: 18px;
+}
+
+.contenido article {
+	padding: 30px;
+	background: #fff;
+}
+
+.contenido article p{
+	margin-bottom: 10px;
+	color:#000;
+}
+
+.contenedor{
+    text-align: center;
+}
+
+    
+    /* Add a gray background color and some padding to the footer */
+
+  .carousel-inner img {
+     /* width: 100%;  Set width to 100% */
+      margin: auto;
+      min-height:300px;
+      /*max-width: 10px;*/
+      max-height:300px;
+      /*min-width: 10px;*/
+  }
+
+  /* Hide the carousel text when the screen is less than 600 pixels wide */
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; 
+    }
+  }
+
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+    width: 40%;
+    margin: auto;
+  }
+
+ .thumbnail,.caption{
+  text-align: center;
+}
+
+#cantidadProductosCarrito {
+    margin-top: 1.5em; 
+    font-weight: bold;
+    color: grey;
+    /*background-color: linen;*/
+}

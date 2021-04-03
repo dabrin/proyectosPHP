@@ -1,0 +1,19 @@
+ El sitio permitirá aplicarle descuentos a los artículos diferentes) y aplicarles el descuento x.-----Al final
+
+ Se podrán crear combos de artículos y aplicarle a este combo un descuento especificado por el usuario,
+este debe mostrar el precio del combo sin descuento (suma del precio de los artículos que compo combo y
+precio con descuento). Calificados con una puntuación de 0 a 5 y los combos con mayor puntuación serán 
+desplegados en la sección de anuncios del sitio.
+
+
+
+ Debe haber una función que permita ver el carrito y eliminar artículos,
+ macarlos para realizar la compra después y realizar el checkout de artículos y finalmente la compra y pago.(gestionar bien el login)
+
+ Se debe hacer una simulación del pago con tarjeta de los artículos a comprar()----
+
+ Una vez realizada la comprar el cliente va a poder ver su historial de compras,
+ por lo que debe quedar registrada la venta.-----
+
+
+ 

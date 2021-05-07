@@ -7,9 +7,7 @@
   background-size: cover;
 }
 
-/*.mat-form-field + .mat-form-field {
-  margin-left: 8px;
-}*/
+
 .example-form {
   min-width: 150px;
   max-width: 500px;
@@ -19,4 +17,21 @@
 .example-full-width {
   margin-left: 20px;
   width: 100%;
+}
+
+
+/*-->Conocimientos css <--  */
+mat-grid-tile {
+  background: #a00058;
+  border-radius: 8px; 
+  margin-top: 8px;
+}
+
+h4{
+  color: #baabbe;
+  font-display: inherit;
+  font-style: italic;
+}
+mat-grid-tile:hover{
+  background-color: #a000589c;
 }

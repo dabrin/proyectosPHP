@@ -13,6 +13,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
+import {MatListModule} from '@angular/material/list';
+import {MatGridListModule} from '@angular/material/grid-list'; 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
@@ -35,6 +37,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     MatCardModule,
     MatExpansionModule,
     MatInputModule,FormsModule,
+    MatListModule,
+    MatGridListModule,
     ReactiveFormsModule,
 
 

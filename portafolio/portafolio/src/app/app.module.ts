@@ -16,6 +16,9 @@ import { MatInputModule } from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list'; 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SectionAboutComponent } from './section-about/section-about.component';
+import { SectionKnowledgeComponent } from './section-knowledge/section-knowledge.component';
+import { SectionProjsComponent } from './section-projs/section-projs.component';
 
 
 
@@ -24,7 +27,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   declarations: [
     AppComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    SectionAboutComponent,
+    SectionKnowledgeComponent,
+    SectionProjsComponent
   ],
   imports: [
     BrowserModule,

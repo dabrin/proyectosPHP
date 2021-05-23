@@ -20,18 +20,3 @@
 }
 
 
-/*-->Conocimientos css <--  */
-mat-grid-tile {
-  background: #a00058;
-  border-radius: 8px; 
-  margin-top: 8px;
-}
-
-h4{
-  color: #baabbe;
-  font-display: inherit;
-  font-style: italic;
-}
-mat-grid-tile:hover{
-  background-color: #a000589c;
-}

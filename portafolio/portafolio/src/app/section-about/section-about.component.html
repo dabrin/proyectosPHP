@@ -1,0 +1,83 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Dabrin Nájera Barboza</mat-card-title>
+    <mat-card-subtitle>Estudiante: Bach. Informática Empresarial</mat-card-subtitle>
+    <mat-card-subtitle>Universidad de Costa Rica</mat-card-subtitle>
+  </mat-card-header>
+  <!--<img mat-card-image src="/assets/imagen_portaf.jpg" alt="Foto de mi persona" width="50%" height="50%">-->
+  <mat-card-content class="mat-typography">
+    <p>
+    Me considero una persona activa, a la cual le gusta participar de diferentes tipos de actividades. El trabajo en equipo
+    es uno de mis fuertes, me gusta comunicarme con las personas que trabajo. Me gusta ayudar a las personas cuando lo
+    necesitan y tengo la capacidad de hacerlo, si en algún tema le puedo ayudar a un compañero lo hago con todo el gusto. </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <mat-accordion>
+      <mat-expansion-panel  hideToggle >
+        <mat-expansion-panel-header color="primary">
+          <mat-panel-title>
+              <mat-icon color="primary">facebook</mat-icon>
+          </mat-panel-title>
+          <mat-panel-description>
+            <a src="">Aquí puedes contactarme.</a>
+
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>Este es mi perfil de Facebook, para cualquier información extra
+
+          <a href="https://www.facebook.com/dabrin.najera" style="color:#FFFFFF;" target="_blank">
+            <button mat-icon-button  aria-label="Example icon-button with heart icon">
+              <mat-icon>facebook</mat-icon>
+            </button>
+            </a>
+        </p>
+
+      </mat-expansion-panel>
+    </mat-accordion>
+
+<mat-accordion>
+<mat-expansion-panel hideToggle>
+  <mat-expansion-panel-header color="primary">
+    <mat-panel-title>
+      <mat-icon color="primary">contact_mail</mat-icon>
+    </mat-panel-title>
+    <mat-panel-description>
+      Aquí puedes llenar un formulario de contacto, me llegará directamente al correo.
+    </mat-panel-description>
+  </mat-expansion-panel-header>
+  <p>Formulario de contacto!! </p>
+<form class="example-form">
+<br>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input type="email" matInput [formControl]="emailFormControl" placeholder="Ex. pat@example.com">
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Por favor, ingresa un email válido.
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Se requiere de un <strong>Email</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width">
+    <mat-label>Comentario:</mat-label>
+    <textarea matInput placeholder="Algún mensaje que me quieras dar"></textarea>
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <mat-label>Número de Telefono</mat-label>
+    <span matPrefix>+506 &nbsp;</span>
+    <input type="tel" matInput placeholder="2222-2222">
+    <mat-icon matSuffix>phone</mat-icon>
+  </mat-form-field>
+
+  <button mat-raised-button color="primary">Enviar</button>
+</form>    </mat-expansion-panel>
+</mat-accordion>
+
+<p>
+<mat-icon>mail</mat-icon> dabrinltecr@gmail.com</p>
+  </mat-card-actions>
+</mat-card>
+

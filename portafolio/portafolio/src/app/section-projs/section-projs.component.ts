@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SectionProjsComponent implements OnInit {
 
-
+  panelOpenState = false;
 
   constructor() { }
 
